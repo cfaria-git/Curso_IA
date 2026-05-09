@@ -1,0 +1,22 @@
+listaNotas = [] #Criacao de lista de lista vazia
+
+print("-" * 40)
+print("Bem vindo a AI que calcula média de notas")
+print("-" * 40)
+
+while True:
+    notas = input("Digite a nota. <Sair> para parar: ")
+    
+    if notas.lower() == "sair": #Função lower() mantém a palavra sair em minusculo
+        break
+    else:
+        listaNotas.append(float(notas)) #Insere dados numa lista listaNotas
+
+media = sum(listaNotas) / len(listaNotas)
+
+print(f"A média é {media:.2f}") # :.2f Limita a quantidade casa após a virgula
+
+if media >= 6:
+    print("Aprovado")
+else:
+    print("Reprovado")
