@@ -1,0 +1,5 @@
+#Aqui estão o arquivo que serão ignorados
+.env
+/.venv
+/temp
+registros.db
