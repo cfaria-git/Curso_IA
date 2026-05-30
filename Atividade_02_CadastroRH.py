@@ -15,4 +15,3 @@ if st.button("Cadastrar"):
         
     else:
         st.error("Ocorreu algum erro. Preencha as informações!")
-
