@@ -2,8 +2,10 @@ import streamlit as st
 
 st.title("Bem ao cardápio da Pizzaria DiPadre 🍕")
 st.header("O sabor italiano mais perto de você ")
+st.markdown("teste")
 
 st.image("pizza.jpg")
+#st.image("https://pixabay.com/pt/images/download/mariya_m-salami-pizza-6593465_1920.jpg")
 
 nomeCliente = st.text_input("Digite o nome: ")
 cidade = st.text_input("Digite a cidade: ")
