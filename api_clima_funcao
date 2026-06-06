@@ -1,0 +1,21 @@
+import requests
+
+#Para criar uma funcao , utilzamos o comando def   
+api_key = "64e1988a78c3a19208e9cb2771c25118"
+cidade = "Americana"
+
+def get_clima():
+
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={cidade}&appid={api_key}&units=metric&lang=pt"
+    
+    try:
+        dados = requests.get(url)
+        resposta = dados.json()
+        temperatura_atual = resposta['main']['temp']
+        umidade = resposta['main']['humidity']
+        descricao = resposta['weather'][0]['description']
+        return f"Cidade de {cidade} - Temperatura: {temperatura_atual}°C, Umidade: {umidade}"
+    except:
+        return ("Não foi possivel realizar a sua requisição")
+    
+print(get_clima())
